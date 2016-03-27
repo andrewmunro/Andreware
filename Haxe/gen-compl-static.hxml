@@ -1,0 +1,27 @@
+# this file is here for convenience only (e.g. to make your IDE work or to compile without invoking UE4 Build)
+# this is not used by the build pipeline, and is recommended to be ignored by your SCM
+# please change "arguments.hxml" instead
+
+--cwd /Users/amu19/Personal/Unreal/Andreware/Haxe
+--no-output
+arguments.hxml
+-cp /Users/amu19/Personal/Unreal/Andreware/Haxe/Generated/Externs_Editor
+-cp /Users/amu19/Personal/Unreal/Andreware/Plugins/UE4Haxe/Haxe/Static
+-cp /Users/amu19/Personal/Unreal/Andreware/Haxe/Static
+
+-main UnrealInit
+
+-D static_link
+-D destination=/Users/amu19/Personal/Unreal/Andreware/Intermediate/Haxe/Mac-DebugGame-Editor/libhaxeruntime.a
+-D haxe_runtime_dir=/Users/amu19/Personal/Unreal/Andreware/Source/Andreware
+-D bake_dir=/Users/amu19/Personal/Unreal/Andreware/Haxe/Generated/Externs_Editor
+-D HXCPP_DLL_EXPORT
+-cpp /Users/amu19/Personal/Unreal/Andreware/Intermediate/Haxe/Mac-DebugGame-Editor/Static/Built
+-D WITH_EDITOR
+-dce no
+-debug
+-D HXCPP_M64
+-D scriptable
+-D dll_export=
+-D WITH_CPPIA
+-D BUILDTOOL_VERSION_LEVEL=4

@@ -1,0 +1,14 @@
+# this file is here for convenience only (e.g. to make your IDE work or to compile without invoking UE4 Build)
+# this is not used by the build pipeline, and is recommended to be ignored by your SCM
+# please change "arguments.hxml" instead
+
+# this pass will bake the extern type definitions into glue code
+-cp /Users/amu19/Personal/Unreal/Andreware/Plugins/UE4Haxe/Haxe/Static
+-D use-rtti-doc
+-D bake-externs
+
+-cpp /Users/amu19/Personal/Unreal/Andreware/Haxe/Generated/Externs_Editor
+--no-output
+--macro ue4hx.internal.ExternBaker.process(["/Users/amu19/Personal/Unreal/Andreware/Plugins/UE4Haxe/Haxe/Externs","/Users/amu19/Personal/Unreal/Andreware/Haxe/Externs"], false)
+-D WITH_EDITOR
+-D BUILDTOOL_VERSION_LEVEL=4
